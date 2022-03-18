@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <RootNamespace>city_gis_scraper_eventsystem</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="CityGis.Data.RecorderReader, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>libs\CityGis.Data.RecorderReader.dll</HintPath>
+      </Reference>
+      <Reference Include="CityGisCore, Version=1.0.7125.28119, Culture=neutral, PublicKeyToken=null">
+        <HintPath>libs\CityGisCore.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="InfluxDB.Client" Version="4.0.0-rc3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="config\config.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>
